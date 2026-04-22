@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>__LABEL__</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>__RUN_SCRIPT__</string>
+  </array>
+
+  <key>WorkingDirectory</key>
+  <string>__WORKING_DIRECTORY__</string>
+
+  <key>RunAtLoad</key>
+  <true/>
+
+  <key>StartInterval</key>
+  <integer>__START_INTERVAL__</integer>
+
+  <key>StandardOutPath</key>
+  <string>__STDOUT_PATH__</string>
+
+  <key>StandardErrorPath</key>
+  <string>__STDERR_PATH__</string>
+
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>PATH</key>
+    <string>__PATH_VALUE__</string>
+    <key>PPT_TRANSLATOR_PROVIDER</key>
+    <string>__PROVIDER__</string>
+    <key>PPT_TRANSLATOR_SOURCE_LANG</key>
+    <string>__SOURCE_LANG__</string>
+    <key>PPT_TRANSLATOR_TARGET_LANG</key>
+    <string>__TARGET_LANG__</string>
+    <key>PPT_TRANSLATOR_MAX_FILE_WORKERS</key>
+    <string>__MAX_FILE_WORKERS__</string>
+  </dict>
+</dict>
+</plist>

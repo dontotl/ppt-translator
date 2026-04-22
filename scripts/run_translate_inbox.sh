@@ -8,6 +8,10 @@ TRANSLATE_SCRIPT="$SKILL_SCRIPTS_DIR/translate_ppt.sh"
 STATE_DIR="$ROOT_DIR/.run"
 LOCK_DIR="$STATE_DIR/translate-inbox.lock"
 LOG_DIR="$ROOT_DIR/logs"
+PROVIDER="${PPT_TRANSLATOR_PROVIDER:-openai}"
+SOURCE_LANG="${PPT_TRANSLATOR_SOURCE_LANG:-auto}"
+TARGET_LANG="${PPT_TRANSLATOR_TARGET_LANG:-ko}"
+MAX_FILE_WORKERS="${PPT_TRANSLATOR_MAX_FILE_WORKERS:-3}"
 
 mkdir -p "$STATE_DIR" "$LOG_DIR"
 
@@ -68,10 +72,10 @@ done
 cd "$SKILL_SCRIPTS_DIR"
 "$TRANSLATE_SCRIPT" \
   "$INBOX_DIR" \
-  --provider openai \
-  --source-lang auto \
-  --target-lang ko \
+  --provider "$PROVIDER" \
+  --source-lang "$SOURCE_LANG" \
+  --target-lang "$TARGET_LANG" \
   --skip-existing-translated \
-  --max-file-workers 3
+  --max-file-workers "$MAX_FILE_WORKERS"
 
 log "Translation run completed."
