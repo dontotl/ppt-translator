@@ -1,0 +1,21 @@
+.DS_Store
+__pycache__/
+*.pyc
+
+# Local runtime and outputs
+.run/
+logs/
+translate-inbox/
+
+# Skill-local secrets and virtualenvs
+.codex/skills/ppt-translator/scripts/.env
+.codex/skills/ppt-translator/scripts/.venv/
+
+# macOS background runtime mirror
+.codex-runtime/
+
+# Local development runtime outside the repo tree
+runtime/
+
+# Upstream scratch copy not needed for this repo
+source-repo/

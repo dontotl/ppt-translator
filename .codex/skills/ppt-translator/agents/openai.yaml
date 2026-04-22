@@ -1,0 +1,7 @@
+interface:
+  display_name: "PPT Translator"
+  short_description: "Translate PowerPoint decks with formatting preserved"
+  default_prompt: "Use $ppt-translator to translate a PowerPoint deck while keeping layout, fonts, tables, and colors intact."
+
+policy:
+  allow_implicit_invocation: true
